@@ -245,6 +245,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .list {
@@ -256,10 +257,25 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .section {
@@ -503,19 +519,55 @@ img {
   background-color: var(--backgound-second-color);
 }
 
+.section-team {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section-team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.title {
+  color: var(--second-text-color);
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.title--possition {
+  margin-bottom: var(--typical-margin);
+}
+@media screen and (min-width: 1200px) {
+  .title--possition {
+    margin-bottom: 50px;
+  }
+}
+
 .team__list {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .team__item {
-  width: 270px;
+  width: 100%;
   background-color: var(--background-main-color);
   text-align: center;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team__item:not(:last-child) {
-  margin-right: var(--typical-margin);
+@media screen and (min-width: 768px) {
+  .team__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .team__subtitle {
