@@ -1,0 +1,11 @@
+@mixin font($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+@mixin transit($property, $duration: 250ms, $cubic: cubic-bezier(0.4, 0, 0.2, 1)) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $cubic;
+}

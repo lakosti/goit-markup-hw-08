@@ -1,0 +1,102 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--header-footer-background-color);
+}
+.footer-position {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-container {
+  margin-right: 70px;
+}
+.footer-container__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.logo--white {
+  color: var(--accent-text-color);
+}
+
+.address__street {
+  font-weight: 400px;
+  line-height: 1.71;
+  @include transit(color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address__list {
+  font-style: normal;
+}
+.address__address--link {
+  color: var(--accent-text-color);
+}
+.address__connect--link {
+  color: rgba(225, 225, 225, 0.6);
+}
+
+// ----------------------------------JOIN-----------------------------------
+
+.footer-title {
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--accent-text-color);
+}
+.footer--title {
+  margin-bottom: 20px;
+}
+
+.join--soc--link {
+  color: var(--accent-text-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+// ----------------------------FOOTER FORM----------------------------------
+.form {
+  @extend %align-list;
+  justify-content: center;
+}
+.subscribe-wrap {
+  margin-left: auto;
+}
+.input-mail {
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 358px;
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: var(--accent-text-color);
+  @include transit(border);
+
+  &:hover {
+    border: 1px solid var(--accent-color);
+  }
+  &:focus {
+    border: 1px solid var(--accent-text-color);
+  }
+}
+.input-mail--right {
+  margin-right: 12px;
+}
+.footer-btn {
+  padding: 10px 29px;
+  width: 200px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--animation-time), transform var(--animation-time),
+    box-shadow var(--animation-time);
+}
+
+.btn__icon-telegram {
+  margin-left: 10px;
+  fill: currentColor;
+}

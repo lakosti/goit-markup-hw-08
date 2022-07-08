@@ -1,0 +1,23 @@
+.contact {
+  @extend %align-list;
+  justify-content: center;
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.nav-contact {
+  margin-left: auto;
+}
+.contact__link {
+  display: flex;
+  align-items: center;
+}
+.contact--color {
+  color: var(--main-text-color);
+}
+
+.contact__tel__icon,
+.contact__mail__icon {
+  fill: currentColor;
+  margin-right: 10px;
+}

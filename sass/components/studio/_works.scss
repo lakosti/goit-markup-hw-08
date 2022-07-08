@@ -1,0 +1,32 @@
+.work {
+  padding-top: 0px;
+}
+.work__list {
+  display: flex;
+  margin: -15px;
+}
+.work__item {
+  position: relative;
+  flex-basis: calc(100% / 3 - 30px);
+  margin: 15px;
+}
+.work__absolute {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  @extend %align-list;
+  justify-content: center;
+  @include font(700, null, 1.14, null);
+  text-transform: uppercase;
+  color: var(--accent-text-color);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.title {
+  color: var(--second-text-color);
+  @include font(null, 36px, 1.16, null);
+  text-align: center;
+}
+.title--possition {
+  margin-bottom: 50px;
+}
