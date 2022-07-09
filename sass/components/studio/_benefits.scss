@@ -1,12 +1,25 @@
 // placeholders
+.benefits-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .benefits__list {
-  @extend %align-list;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .benefits__item {
-  width: 270px;
-  &:not(:last-child) {
-    margin-right: var(--typical-margin);
+  width: 100%;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
   }
   &::before {
     display: block;

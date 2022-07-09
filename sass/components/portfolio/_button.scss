@@ -1,3 +1,11 @@
+.portfolio-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .portfolio-btn {
   padding: 6px 22px;
   border: none;
@@ -18,8 +26,18 @@
 
 .radio-button {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  gap: 15px 8px;
+  margin-bottom: 40px;
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 0;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 .radio-button__item:not(:last-child) {
   margin-right: 8px;

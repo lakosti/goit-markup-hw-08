@@ -12,9 +12,12 @@
 .hero__title {
   margin-bottom: var(--typical-margin);
   color: var(--accent-text-color);
-  @include font(900, 44px, 1.36, 0.06em);
+  @include font(900, 26px, 1.62, 0.06em);
   text-align: center;
   text-transform: uppercase;
+  @include desktop {
+    @include font(900, 44px, 1.36, 0.06em);
+  }
 }
 .btn {
   display: flex;
