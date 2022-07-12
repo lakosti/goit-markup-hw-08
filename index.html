@@ -9,7 +9,7 @@
   </head>
   <body>
     <!--Шапка таблицы-->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <a href="./index.html" class="logo header__logo link"
           >Web<span class="logo--black">Studio</span></a
@@ -41,17 +41,65 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open-btn"></button>
       </div>
-    </header> -->
+      <div class="mob-menu">
+        <div class="container">
+          <div class="wrap">
+            <button type="button" class="close-menu-btn">
+              <svg class="icon-close-menu" width="40" height="40">
+                <use href="./images/icons.svg.svg#close-burger"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a href="./index.html" class="mob-menu__link mob-menu--active link mob-menu--color"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="./portfolio.html" class="mob-menu__link link mob-menu--color">Портфолио</a>
+              </li>
+              <li class="mob-menu__item">
+                <a href="" class="mob-menu__link link mob-menu--color">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="mob-contact list">
+            <li class="mob-contact__item-tel">
+              <a href="tel:+380961111111" class="mob-contact__link mob--color link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mob-contact__item-mail">
+              <a href="mailto:info@devstudio.com" class="mob-contact__link mob-contact--color link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mob-soc list">
+            <li class="mob-soc__item">
+              <a href="" class="mob-soc__link mob--color link">Instagram</a>
+            </li>
+            <li class="mob-soc__item">
+              <a href="" class="mob-soc__link mob--color link">Twitter</a>
+            </li>
+            <li class="mob-soc__item">
+              <a href="" class="mob-soc__link mob--color link">Facebook</a>
+            </li>
+            <li class="mob-soc__item">
+              <a href="" class="mob-soc__link mob--color link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
     <!--Main контейнер-->
     <main>
       <!--Hero-->
       <!-- <section class="hero">
-        <div class="container">
-          <h1 class="hero__title">
-            Эффективные решения <br />
-            для вашего бизнеса
-          </h1>
+        <div class="container hero-wrap">
+          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button type="button" class="btn hero__btn" data-modal-open>Заказать услугу</button>
         </div>
       </section> -->
@@ -93,15 +141,30 @@
           <h2 class="title title--possition">Чем мы занимаемся</h2>
           <ul class="work__list list">
             <li class="work__item">
-              <img src="./images/box1.jpg" alt="Website development" width="370" />
+              <img
+                srcset="./images/box1.jpg 1x, ./images/work1-x2.jpg 2x"
+                src="./images/box1.jpg"
+                alt="Website development"
+                width="370"
+              />
               <p class="work__absolute">Десктопные приложения</p>
             </li>
             <li class="work__item">
-              <img src="./images/img.jpg" alt="Website layout" width="370" />
+              <img
+                srcset="./images/img.jpg 1x, ./images/work2-x2.jpg 2x"
+                src="./images/img.jpg"
+                alt="Website layout"
+                width="370"
+              />
               <p class="work__absolute">Мобильные приложения</p>
             </li>
             <li class="work__item">
-              <img src="./images/box3.jpg" alt="Color variables" width="370" />
+              <img
+                srcset="./images/box3.jpg 1x, ./images/work3-x2.jpg 2x"
+                src="./images/box3.jpg"
+                alt="Color variables"
+                width="370"
+              />
               <p class="work__absolute">Дизайнерские решения</p>
             </li>
           </ul>
@@ -308,7 +371,7 @@
 
     <!--Footer-->
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-position">
         <div class="footer-container">
           <a href="./index.html" class="logo footer-container__logo link"
@@ -386,7 +449,7 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- ---------------------------MODAL----------------------------------------- -->
 

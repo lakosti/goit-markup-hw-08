@@ -1,5 +1,6 @@
 .nav {
-  @extend %align-list;
+  display: none;
+  // @extend %align-list;
 }
 .nav__list {
   display: flex;

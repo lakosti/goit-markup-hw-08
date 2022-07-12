@@ -4,7 +4,9 @@
   color: var(--accent-color);
 }
 .header__logo {
-  margin-right: 93px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  // margin-right: 93px;
 }
 .logo--black {
   color: var(--black-text-color);

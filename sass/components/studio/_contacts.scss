@@ -1,9 +1,10 @@
 .contact {
-  @extend %align-list;
-  justify-content: center;
-  &__item:not(:last-child) {
-    margin-right: 50px;
-  }
+  display: none;
+  // @extend %align-list;
+  // justify-content: center;
+  // &__item:not(:last-child) {
+  //   margin-right: 50px;
+  // }
 }
 .nav-contact {
   margin-left: auto;

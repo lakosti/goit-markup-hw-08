@@ -1,6 +1,79 @@
 .header {
   border-bottom: 1px solid #ececec;
-  .container {
+  > .container {
     @extend %align-list;
   }
+}
+.menu-open-btn {
+  display: block;
+  margin-left: auto;
+}
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.close-menu-btn {
+  display: block;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  @include transit(fill);
+  // margin-bottom: 15px;
+}
+.close-menu-btn:hover,
+.close-menu-btn:focus {
+  fill: var(--accent-color);
+}
+
+.mob-menu__item {
+  @include font(500, 40px, 1.17, 0.02em);
+}
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mob-contact__item-tel {
+  margin-bottom: 32px;
+  @include font(500, 34px, 1.17, 0.02em);
+}
+.mob-contact__item-mail {
+  @include font(500, 24px, 1.16, 0.02em);
+}
+.mob-menu--color {
+  color: var(--second-text-color);
+}
+.mob-contact {
+  margin-bottom: 64px;
+}
+.mob-contact--color {
+  color: var(--main-text-color);
+}
+.mob--color,
+.mob-menu--active {
+  color: var(--accent-color);
+}
+.mob-soc {
+  position: relative;
+  display: flex;
+}
+.mob-soc__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.mob-soc__item {
+  @include font(500, 18px, 1.22, 0.02em);
+}
+.mob-soc__item::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 22px;
+  background-color: rgba(33, 33, 33, 0.2);
 }
