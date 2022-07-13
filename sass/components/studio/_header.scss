@@ -1,5 +1,8 @@
 .header {
   border-bottom: 1px solid #ececec;
+  @media screen and (max-width: 767px) {
+    position: relative;
+  }
   > .container {
     @extend %align-list;
   }
@@ -58,6 +61,12 @@
 }
 .mob-menu__item:not(:last-child) {
   margin-bottom: 32px;
+}
+.mob-contact {
+  @include tablet {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
 }
 .mob-contact__item-tel {
   margin-bottom: 32px;

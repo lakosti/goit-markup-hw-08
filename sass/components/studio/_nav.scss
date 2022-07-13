@@ -34,6 +34,12 @@
     color: var(--accent-color);
   }
 }
+.nav__link {
+  @include tablet {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
 .contact__link {
   @include tablet {
     @include font(500, 12px, 1.16, 0.02em);
@@ -47,9 +53,9 @@
   color: var(--accent-color);
   &::after {
     position: absolute;
-    bottom: -33px;
+    bottom: -9px;
     @include desktop {
-      bottom: 0;
+      bottom: -9px;
     }
     left: 0;
     content: '';

@@ -5,20 +5,50 @@
 }
 .footer-position {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
-.footer-container {
-  margin-right: 70px;
+@include tablet {
+  .footer__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 74px 0 61px;
+
+    @include desktop {
+      padding: 0;
+      flex-direction: row;
+      justify-content: start;
+    }
+  }
 }
+.footer-container {
+  margin-top: 20px;
+  text-align: center;
+  @include desktop {
+    text-align: left;
+  }
+}
+
+// .footer-container {
+//   // margin-right: 70px;
+// }
 .footer-container__logo {
   display: inline-block;
   margin-bottom: 20px;
+  // text-align: center;
+  text-align: center;
 }
 .logo--white {
   color: var(--accent-text-color);
 }
-
+.address {
+  text-align: center;
+}
 .address__street {
   font-weight: 400px;
   line-height: 1.71;
@@ -26,6 +56,10 @@
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  @include desktop {
+    display: flex;
+    align-items: start;
   }
 }
 .address__item:not(:last-child) {
@@ -42,14 +76,36 @@
 }
 
 // ----------------------------------JOIN-----------------------------------
+// .join {
+//   //  display: flex;
+//   // flex-direction: column;
+//   // align-items: center;
+// }
+@include desktop {
+  .join {
+    margin-left: 70px;
+  }
+}
+.soc-footer {
+  display: flex;
+  justify-content: center;
 
+  // display: flex;
+  // justify-content: center;
+}
 .footer-title {
+  display: block;
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
   color: var(--accent-text-color);
+  @include desktop {
+    display: flex;
+    align-items: start;
+  }
 }
 .footer--title {
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -59,18 +115,30 @@
 }
 
 // ----------------------------FOOTER FORM----------------------------------
-.form {
-  @extend %align-list;
-  justify-content: center;
+
+.footer-form {
+  margin-top: 60px;
+  @include desktop {
+    margin-top: 0;
+    margin-left: 93px;
+  }
 }
-.subscribe-wrap {
-  margin-left: auto;
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 .input-mail {
+  max-width: 450px;
+  width: 100%;
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 358px;
   background-color: transparent;
   outline: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -84,16 +152,25 @@
   &:focus {
     border: 1px solid var(--accent-text-color);
   }
+  @include desktop {
+    margin-bottom: 0;
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 .input-mail--right {
   margin-right: 12px;
+  margin-bottom: 20px;
 }
 .footer-btn {
   padding: 10px 29px;
-  width: 200px;
+  // width: 200px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color var(--animation-time), transform var(--animation-time),
     box-shadow var(--animation-time);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn__icon-telegram {
