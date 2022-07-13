@@ -1049,6 +1049,7 @@ img {
 }
 .footer-container {
   margin-top: 20px;
+  margin-bottom: 60px;
   text-align: center;
 }
 @media screen and (min-width: 1200px) {
