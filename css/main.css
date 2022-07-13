@@ -268,6 +268,10 @@ img {
   }
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .modal__close-bnt, .clients__link, .soc__link, .work__absolute, .header > .container {
   display: flex;
   align-items: center;
@@ -410,14 +414,13 @@ img {
 }
 
 .mob-soc__item {
-  position: relative;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
 }
 
-.mob-soc__link::after {
+.mob-soc__link:not(:last-child)::after {
   position: absolute;
   right: -10px;
   content: "";
@@ -1054,6 +1057,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer-container {
+    margin-bottom: 0;
+    margin-top: 0;
     text-align: left;
   }
 }
@@ -1141,6 +1146,11 @@ img {
 
 .footer-form {
   margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-form {
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-form {
@@ -1420,6 +1430,8 @@ img {
 }
 
 .form-btn {
+  display: block;
+  margin: 0 auto;
   padding: 10px 55px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   transition-duration: 500ms;
