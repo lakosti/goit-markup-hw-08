@@ -2,11 +2,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  @include transit(opacity);
+  transition: opacity var(--animation-time), visibility var(--animation-time);
 }
 .is-hidden {
   opacity: 0;
@@ -14,21 +14,39 @@
   pointer-events: none;
 }
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.1);
+  @media (max-width: 1200px) {
+    transform: translate(0, 0) scale(0, 0);
+  }
+  transform: translate(-50%, -50%) scale(0, 0);
 }
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  min-height: 581px;
+  @media (max-width: 1200px) {
+    position: relative;
+
+    margin: 50px auto 0;
+    overflow: auto;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 528px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   padding: 40px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   background-color: var(--background-main-color);
   @include transit(transform);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
 }
 .modal-form__title {
   margin-bottom: 12px;
@@ -40,10 +58,7 @@
   margin-bottom: 10px;
   @include transit(border-color);
 }
-/* .modal-field:focus-within .input-wrap,
-.modal-field:hover .input-wrap {
-  border: 1px solid var(--accent-color);
-} */
+
 .modal-field__input {
   padding: 11px 42px;
   height: 40px;
@@ -138,7 +153,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @include font(400, null, 1.71, null);
+  @include font(null, 11px, 1.16, null);
+  @include desktop {
+    @include font(null, 14px, 1.71, null);
+  }
 }
 .modal-checkbox__label span {
   width: 16px;
@@ -181,6 +199,10 @@
 }
 
 .modal-checkbox__link {
+  // @include font(null, 12px, 1.16, null);
+  // @include desktop {
+  //   @include font(null, 14px, 1.71, null);
+  // }
   color: var(--accent-color);
 }
 

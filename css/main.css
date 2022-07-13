@@ -1223,13 +1223,11 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--animation-time), visibility var(--animation-time);
 }
 
 .is-hidden {
@@ -1239,16 +1237,15 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.1);
+  transform: translate(-50%, -50%) scale(0, 0);
+}
+@media (max-width: 1200px) {
+  .backdrop.is-hidden .modal {
+    transform: translate(0, 0) scale(0, 0);
+  }
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  min-height: 581px;
   padding: 40px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1256,6 +1253,29 @@ img {
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-width: 1200px) {
+  .modal {
+    position: relative;
+    margin: 50px auto 0;
+    overflow: auto;
+    max-width: 450px;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-form__title {
@@ -1274,10 +1294,6 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .modal-field:focus-within .input-wrap,
-.modal-field:hover .input-wrap {
-  border: 1px solid var(--accent-color);
-} */
 .modal-field__input {
   padding: 11px 42px;
   height: 40px;
@@ -1381,8 +1397,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 400;
-  line-height: 1.71;
+  font-size: 11px;
+  line-height: 1.16;
+}
+@media screen and (min-width: 1200px) {
+  .modal-checkbox__label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-checkbox__label span {
