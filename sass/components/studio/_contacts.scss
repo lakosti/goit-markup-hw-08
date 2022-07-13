@@ -1,10 +1,26 @@
 .contact {
   display: none;
-  // @extend %align-list;
-  // justify-content: center;
-  // &__item:not(:last-child) {
-  //   margin-right: 50px;
-  // }
+  @include tablet {
+    display: block;
+  }
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+@include tablet {
+  .contact__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@include desktop {
+  .contact__item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 .nav-contact {
   margin-left: auto;

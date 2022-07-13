@@ -41,11 +41,15 @@
             >
           </li>
         </ul>
-        <button type="button" class="menu-open-btn"></button>
+        <button type="button" class="menu-open-btn">
+          <svg class="icon-close-menu" width="40" height="40">
+            <use href="./images/icons.svg.svg#burger-menu"></use>
+          </svg>
+        </button>
       </div>
-      <div class="mob-menu">
+      <div class="mob-menu is-hidden">
         <div class="container">
-          <div class="wrap">
+          <div>
             <button type="button" class="close-menu-btn">
               <svg class="icon-close-menu" width="40" height="40">
                 <use href="./images/icons.svg.svg#close-burger"></use>
@@ -65,46 +69,50 @@
               </li>
             </ul>
           </div>
-          <ul class="mob-contact list">
-            <li class="mob-contact__item-tel">
-              <a href="tel:+380961111111" class="mob-contact__link mob--color link"
-                >+38 096 111 11 11</a
-              >
-            </li>
-            <li class="mob-contact__item-mail">
-              <a href="mailto:info@devstudio.com" class="mob-contact__link mob-contact--color link"
-                >info@devstudio.com</a
-              >
-            </li>
-          </ul>
-          <ul class="mob-soc list">
-            <li class="mob-soc__item">
-              <a href="" class="mob-soc__link mob--color link">Instagram</a>
-            </li>
-            <li class="mob-soc__item">
-              <a href="" class="mob-soc__link mob--color link">Twitter</a>
-            </li>
-            <li class="mob-soc__item">
-              <a href="" class="mob-soc__link mob--color link">Facebook</a>
-            </li>
-            <li class="mob-soc__item">
-              <a href="" class="mob-soc__link mob--color link">LinkedIn</a>
-            </li>
-          </ul>
+          <div>
+            <ul class="mob-contact list">
+              <li class="mob-contact__item-tel">
+                <a href="tel:+380961111111" class="mob-contact__link mob--color link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contact__item-mail">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mob-contact__link mob-contact--color link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-soc list">
+              <li class="mob-soc__item">
+                <a href="" class="mob-soc__link mob--color link">Instagram</a>
+              </li>
+              <li class="mob-soc__item">
+                <a href="" class="mob-soc__link mob--color link">Twitter</a>
+              </li>
+              <li class="mob-soc__item">
+                <a href="" class="mob-soc__link mob--color link">Facebook</a>
+              </li>
+              <li class="mob-soc__item">
+                <a href="" class="mob-soc__link mob--color link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
     <!--Main контейнер-->
     <main>
       <!--Hero-->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container hero-wrap">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button type="button" class="btn hero__btn" data-modal-open>Заказать услугу</button>
         </div>
-      </section> -->
+      </section>
       <!--Benefits-->
-      <!-- <section class="benefits benefits-section">
+      <section class="benefits benefits-section">
         <div class="container">
           <h2 class="visually-hidden">Почему именно мы?</h2>
           <ul class="benefits__list list">
@@ -134,9 +142,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Works-->
-      <!-- <section class="work section">
+      <section class="work section">
         <div class="container">
           <h2 class="title title--possition">Чем мы занимаемся</h2>
           <ul class="work__list list">
@@ -169,9 +177,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Team-->
-      <!-- <section class="team section-team">
+      <section class="team section-team">
         <div class="container">
           <h2 class="title title--possition">Наша команда</h2>
           <ul class="team__list list">
@@ -322,9 +330,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Clients -->
-      <!-- <section class="clients section-cllients">
+      <section class="clients section-cllients">
         <div class="container">
           <h2 class="title title--possition">Постоянные клиенты</h2>
           <ul class="clients__list list">
@@ -366,7 +374,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <!--Footer-->
@@ -541,5 +549,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
