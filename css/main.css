@@ -414,13 +414,14 @@ img {
 }
 
 .mob-soc__item {
+  position: relative;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
 }
 
-.mob-soc__link:not(:last-child)::after {
+.mob-soc__after::after {
   position: absolute;
   right: -10px;
   content: "";

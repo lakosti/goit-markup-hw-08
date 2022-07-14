@@ -85,16 +85,16 @@
               </li>
             </ul>
             <ul class="mob-soc list">
-              <li class="mob-soc__item">
+              <li class="mob-soc__item mob-soc__after">
                 <a href="" class="mob-soc__link mob--color link">Instagram</a>
               </li>
-              <li class="mob-soc__item">
+              <li class="mob-soc__item mob-soc__after">
                 <a href="" class="mob-soc__link mob--color link">Twitter</a>
               </li>
-              <li class="mob-soc__item">
+              <li class="mob-soc__item mob-soc__after">
                 <a href="" class="mob-soc__link mob--color link">Facebook</a>
               </li>
-              <li class="mob-soc__item">
+              <li class="mob-soc__item no-border">
                 <a href="" class="mob-soc__link mob--color link">LinkedIn</a>
               </li>
             </ul>
@@ -149,7 +149,7 @@
           <ul class="work__list list">
             <li class="work__item">
               <img
-                srcset="./images/box1.jpg 1x, ./images/work1-x2.jpg 2x"
+                srcset="./images/box1.jpg 370w, ./images/work1-x2.jpg 740w"
                 src="./images/box1.jpg"
                 alt="Website development"
                 width="370"
@@ -158,7 +158,7 @@
             </li>
             <li class="work__item">
               <img
-                srcset="./images/img.jpg 1x, ./images/work2-x2.jpg 2x"
+                srcset="./images/img.jpg 370w, ./images/work2-x2.jpg 740w"
                 src="./images/img.jpg"
                 alt="Website layout"
                 width="370"
@@ -167,7 +167,7 @@
             </li>
             <li class="work__item">
               <img
-                srcset="./images/box3.jpg 1x, ./images/work3-x2.jpg 2x"
+                srcset="./images/box3.jpg 370w, ./images/work3-x2.jpg 740w"
                 src="./images/box3.jpg"
                 alt="Color variables"
                 width="370"
@@ -183,7 +183,27 @@
           <h2 class="title title--possition">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item">
-              <img src="./images/img1.jpg" alt="Igor Demyanenko" width="270" />
+              <picture>
+                <source 
+                srcset="
+                ./images/team/desktop/designer.jpg 270w,
+                ./images/team/desktop/designer-2x.jpg 540w
+                " 
+                media="(min-width: 1200px)" />
+                <source 
+                srcset="
+                ./images/team/tablet/designer-tab.jpg 354w,
+                ./images/team/tablet/designer-tab-2x.jpg 708w
+                " 
+                media="(min-width: 768px)" />
+                <source 
+                srcset="
+                ./images/team/mobile/designer-mob.jpg 450w,
+                ./images/team/mobile/designer-mob-2x.jpg 900w
+                " 
+                media="(min-width: 320px)" />
+                <img src="./images/team/mobile/designer-mob-2x.jpg" alt="Igor Demyanenko"/>
+              </picture>
               <div class="team__description">
                 <h3 class="team__subtitle">Игорь Демьяненко</h3>
                 <p class="team__text">Product Designer</p>
@@ -217,7 +237,27 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/img2.jpg" alt="Olga Repina" width="270" />
+              <picture>
+                <source 
+                srcset="
+                ./images/team/desktop/frontend.jpg 270w,
+                ./images/team/desktop/frontend-2x.jpg 540w
+                " 
+                media="(min-width: 1200px)" />
+                <source 
+                srcset="
+                ./images/team/tablet/frontend-tab.jpg 354w,
+                ./images/team/tablet/frontend-tab-2x.jpg 708w
+                " 
+                media="(min-width: 768px)" />
+                <source 
+                srcset="
+                ./images/team/mobile/frontend-mob.jpg 450w,
+                ./images/team/mobile/frontend-mob-2x.jpg 900w
+                " 
+                media="(min-width: 320px)" />
+                <img src="./images/team/mobile/frontend-mob-2x.jpg" alt="Olga Demyanenko"/>
+              </picture>
               <div class="team__description">
                 <h3 class="team__subtitle">Ольга Репина</h3>
                 <p class="team__text">Frontend Developer</p>
@@ -254,7 +294,27 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/img3.jpg" alt="Nikolai Tarasov" width="270" />
+              <picture>
+                <source 
+                srcset="
+                ./images/team/desktop/marketing.jpg 270w,
+                ./images/team/desktop/marketing-2x.jpg 540w
+                " 
+                media="(min-width: 1200px)" />
+                <source 
+                srcset="
+                ./images/team/tablet/marketing-tab.jpg 354w,
+                ./images/team/tablet/marketing-tab-2x.jpg 708w
+                " 
+                media="(min-width: 768px)" />
+                <source 
+                srcset="
+                ./images/team/mobile/marketing-mob.jpg 450w,
+                ./images/team/mobile/marketing-mob-2x.jpg 900w
+                " 
+                media="(min-width: 320px)" />
+                <img src="./images/team/mobile/marketing-mob-2x.jpg" alt="marketing"/>
+              </picture>
               <div class="team__description">
                 <h3 class="team__subtitle">Николай Тарасов</h3>
                 <p class="team__text">Marketing</p>
@@ -291,7 +351,27 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/img4.jpg" alt="Mikhail Ermakov" width="270" />
+              <picture>
+                <source 
+                srcset="
+                ./images/team/desktop/ui.jpg 270w,
+                ./images/team/desktop/ui-2x.jpg 540w
+                " 
+                media="(min-width: 1200px)" />
+                <source 
+                srcset="
+                ./images/team/tablet/ui-tab.jpg 354w,
+                ./images/team/tablet/ui-tab-2x.jpg 708w
+                " 
+                media="(min-width: 768px)" />
+                <source 
+                srcset="
+                ./images/team/mobile/ui-mob.jpg 450w,
+                ./images/team/mobile/ui-mob-2x.jpg 900w
+                " 
+                media="(min-width: 320px)" />
+                <img src="./images/team/mobile/ui-mob-2x.jpg" alt="ui"/>
+              </picture>
               <div class="team__description">
                 <h3 class="team__subtitle">Михаил Ермаков</h3>
                 <p class="team__text">UI Designer</p>
