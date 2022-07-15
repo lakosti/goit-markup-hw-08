@@ -622,6 +622,7 @@ img {
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
+  margin: 0 auto;
   background-color: var(--header-footer-background-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-img-mob.jpg);
   max-width: 1600px;
@@ -767,6 +768,12 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .benefits__subtitle {
+    text-align: start;
+  }
 }
 
 .benefits__text {
@@ -1229,6 +1236,7 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity var(--animation-time), visibility var(--animation-time);
+  overflow: auto;
 }
 
 .is-hidden {
@@ -1247,6 +1255,7 @@ img {
 }
 
 .modal {
+  overflow: auto;
   padding: 40px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1261,6 +1270,7 @@ img {
     margin: 50px auto 0;
     overflow: auto;
     max-width: 450px;
+    height: 609px;
     width: 100%;
   }
 }
@@ -1268,6 +1278,7 @@ img {
   .modal {
     max-width: 528px;
     position: absolute;
+    overflow: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1545,7 +1556,6 @@ img {
 .card__relative {
   display: flex;
   position: relative;
-  height: 294px;
   overflow: hidden;
 }
 
